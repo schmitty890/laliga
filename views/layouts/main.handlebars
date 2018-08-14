@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{{!-- {{> header}} --}}
+{{!-- <body data-user={{hbsObject.user.username}} data-id={{hbsObject.user.id}}> --}}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- built out css styles -->
+    <link rel="stylesheet" href="/build/css/styles.min.css" type="text/css">
+    {{!-- favicon --}}
+    <link rel="shortcut icon" href="public/favicon.png" type="favicon.png">
+  </head>
+  {{> nav}}
+  {{{body}}}
+  {{> footer}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="/build/js/app.min.js" type="text/javascript"></script>
+</body>
+</html>
