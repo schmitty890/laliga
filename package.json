@@ -63,6 +63,7 @@
     "popper.js": "^1.14.3",
     "pug": "^2.0.3",
     "request": "^2.85.0",
+    "run-sequence": "^2.2.1",
     "stripe": "^5.8.0",
     "tumblr.js": "^1.1.1",
     "twilio": "^3.16.0",
@@ -92,7 +93,6 @@
     "gulp-watch-sass": "^1.4.1",
     "mocha": "^5.1.1",
     "nyc": "^11.7.2",
-    "run-sequence": "^2.2.1",
     "sinon": "^4.5.0",
     "sinon-mongoose": "^2.1.1",
     "supertest": "^3.0.0"
