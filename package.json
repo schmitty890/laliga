@@ -13,8 +13,7 @@
     "start": "gulp",
     "test": "nyc mocha --timeout=3000 --exit",
     "lint": "eslint .",
-    "watch": "nodemon server.js",
-    "postinstall": "gulp default"
+    "watch": "nodemon server.js"
   },
   "dependencies": {
     "@ladjs/bootstrap-social": "^7.0.2",
@@ -97,9 +96,5 @@
     "sinon": "^4.5.0",
     "sinon-mongoose": "^2.1.1",
     "supertest": "^3.0.0"
-  },
-  "engines": {
-    "node": ">=8.11.1",
-    "npm": ">=5.6.0"
   }
 }
