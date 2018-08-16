@@ -67,7 +67,8 @@
     "tumblr.js": "^1.1.1",
     "twilio": "^3.16.0",
     "twit": "^2.2.9",
-    "validator": "^10.1.0"
+    "validator": "^10.1.0",
+    "wrench": "^1.5.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -94,8 +95,7 @@
     "run-sequence": "^2.2.1",
     "sinon": "^4.5.0",
     "sinon-mongoose": "^2.1.1",
-    "supertest": "^3.0.0",
-    "wrench": "^1.5.9"
+    "supertest": "^3.0.0"
   },
   "engines": {
     "node": ">=8.11.1",
