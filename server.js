@@ -105,6 +105,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/build', express.static(__dirname + '/build'));
+app.use("/public", express.static(__dirname + "/public"));
 
 // get all routes
 require('./controllers/html-routes.js')(app);
