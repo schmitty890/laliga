@@ -5716,7 +5716,7 @@ body {
     display: inline-block;
     float: right;
     font-size: 9px;
-    line-height: 1.5em;
+    line-height: 48px;
     text-transform: uppercase;
     font-weight: 700;
     font-family: "Exo 2", sans-serif;
@@ -19643,6 +19643,7 @@ td.team-leader__qbr {
 
 .info-block--header {
   display: inline-block;
+  visibility: hidden;
   vertical-align: middle;
 }
 
