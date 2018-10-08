@@ -114,7 +114,13 @@ require('./controllers/api-routes.js')(app);
 
 // show 404 page if no route has been hit
 app.get('*', function(req, res) {
-  res.send('404');
+  const hbsObject = {
+    user: req.user
+  }
+  res.render('404', {
+    title: '404',
+    hbsObject: hbsObject
+  });
 });
 
 /**
