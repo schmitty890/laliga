@@ -10,9 +10,9 @@
           <header class="card__header card__header--has-btn">
             <h4>Latest News</h4>
             {{#if hbsObject.user}}
-            <a href="_football_blog-1.html" class="btn btn-default btn-xs card-header__button">Write a post</a>
+            <a href="_football_blog-1.html" class="btn btn-default btn-xs card-header__button float-right">Write a post</a>
             {{else}}
-            <a href="/login" class="btn btn-default btn-xs card-header__button">Login to write a post</a>
+            <a href="/login" class="btn btn-default btn-xs card-header__button float-right">Login to write a post</a>
             {{/if}}
           </header>
           <div class="card__content">
@@ -252,7 +252,7 @@
         <aside class="widget card widget--sidebar widget-standings">
           <div class="widget__title card__header card__header--has-btn">
             <h4>La Liga 2018</h4>
-            <a href="_football_team-standings.html" class="btn btn-default btn-xs card-header__button">See All Stats</a>
+            {{!-- <a href="_football_team-standings.html" class="btn btn-default btn-xs card-header__button">See All Stats</a> --}}
           </div>
           <div class="widget__content card__content">
             <div class="table-responsive">

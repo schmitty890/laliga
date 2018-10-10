@@ -73,6 +73,11 @@
             <li class=""><a href="/">Home</a></li>
             <li class=""><a href="#">All Time Stats</a></li>
             <li class=""><a href="/facts">League Facts</a></li>
+            {{#if hbsObject.user}}
+              {{!-- <li class=""><a href="/login">Login</a></li> --}}
+            {{else}}
+              <li class=""><a href="/signup">Create Account</a></li>
+            {{/if}}
           </ul>
 
           <!-- Header Search Form -->
