@@ -39,7 +39,7 @@ const app = express();
 /**
  * Connect to MongoDB.
  */
-var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
+var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/laliga';
 mongoose.connect(MONGODB_URI);
 mongoose.connection.on('error', (err) => {
   console.error(err);

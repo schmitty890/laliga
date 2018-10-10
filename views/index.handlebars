@@ -9,7 +9,11 @@
         <div class="card card--clean mb-0">
           <header class="card__header card__header--has-btn">
             <h4>Latest News</h4>
-            <a href="_football_blog-1.html" class="btn btn-default btn-xs card-header__button">See All Posts</a>
+            {{#if hbsObject.user}}
+            <a href="_football_blog-1.html" class="btn btn-default btn-xs card-header__button">Write a post</a>
+            {{else}}
+            <a href="/login" class="btn btn-default btn-xs card-header__button">Login to write a post</a>
+            {{/if}}
           </header>
           <div class="card__content">
             <!-- Posts Grid -->
@@ -255,12 +259,12 @@
               <table class="table table-hover table-standings">
                 <thead>
                   <tr>
-                    <th>Team Positions</th>
+                    <th>Standings</th>
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
+                    {{!-- <th>PF</th>
+                    <th>PA</th> --}}
                   </tr>
                 </thead>
                 <tbody>
@@ -280,8 +284,8 @@
                     <td>10</td>
                     <td>1</td>
                     <td>0</td>
-                    <td>316</td>
-                    <td>213</td>
+                    {{!-- <td>316</td>
+                    <td>213</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -298,8 +302,8 @@
                     <td>9</td>
                     <td>2</td>
                     <td>0</td>
-                    <td>293</td>
-                    <td>197</td>
+                    {{!-- <td>293</td>
+                    <td>197</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -316,8 +320,8 @@
                     <td>8</td>
                     <td>3</td>
                     <td>0</td>
-                    <td>231</td>
-                    <td>213</td>
+                    {{!-- <td>231</td>
+                    <td>213</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -334,8 +338,8 @@
                     <td>7</td>
                     <td>3</td>
                     <td>1</td>
-                    <td>224</td>
-                    <td>187</td>
+                    {{!-- <td>224</td>
+                    <td>187</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -352,8 +356,8 @@
                     <td>6</td>
                     <td>5</td>
                     <td>0</td>
-                    <td>218</td>
-                    <td>201</td>
+                    {{!-- <td>218</td>
+                    <td>201</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -370,8 +374,8 @@
                     <td>5</td>
                     <td>6</td>
                     <td>0</td>
-                    <td>274</td>
-                    <td>289</td>
+                    {{!-- <td>274</td>
+                    <td>289</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -388,8 +392,8 @@
                     <td>3</td>
                     <td>7</td>
                     <td>1</td>
-                    <td>213</td>
-                    <td>245</td>
+                    {{!-- <td>213</td>
+                    <td>245</td> --}}
                   </tr>
                   <tr>
                     <td>
@@ -406,8 +410,8 @@
                     <td>2</td>
                     <td>9</td>
                     <td>0</td>
-                    <td>178</td>
-                    <td>264</td>
+                    {{!-- <td>178</td>
+                    <td>264</td> --}}
                   </tr>
 
                 </tbody>
@@ -418,7 +422,7 @@
         <!-- Widget: Standings / End -->
 
         <!-- Widget: Social Buttons - Grid-->
-        <aside class="widget widget--sidebar widget-social widget-social--grid">
+        {{!-- <aside class="widget widget--sidebar widget-social widget-social--grid">
           <a href="#" class="btn-social-counter btn-social-counter--fb" target="_blank">
             <div class="btn-social-counter__icon">
               <i class="fa fa-facebook"></i>
@@ -451,11 +455,11 @@
             <span class="btn-social-counter__count"><span class="btn-social-counter__count-num">840</span> Subscribers</span>
             <span class="btn-social-counter__add-icon"></span>
           </a>
-        </aside>
+        </aside> --}}
         <!-- Widget: Social Buttons - Grid / End -->
 
         <!-- Widget: Popular News - Numbered -->
-        <aside class="widget widget--sidebar card widget-popular-posts">
+        {{!-- <aside class="widget widget--sidebar card widget-popular-posts">
           <div class="widget__title card__header">
             <h4>Popular News</h4>
           </div>
@@ -508,11 +512,11 @@
               </li>
             </ul>
           </div>
-        </aside>
+        </aside> --}}
         <!-- Widget: Popular News - Numbered / End -->
 
         <!-- Widget: Featured Player -->
-        <aside class="widget card widget--sidebar widget-player widget-player--football">
+        {{!-- <aside class="widget card widget--sidebar widget-player widget-player--football">
           <div class="widget__content card__content">
             <div class="widget-player__ribbon">
               <i class="fa fa-star"></i> Featured Player
@@ -574,190 +578,11 @@
             </div>
 
           </div>
-        </aside>
+        </aside> --}}
         <!-- Widget: Featured Player / End -->
 
-        <!-- Widget: Game Result -->
-        <aside class="widget card widget--sidebar widget-game-result">
-          <div class="widget__title card__header card__header--has-toggle">
-            <h4>Last Game Results</h4>
-            <div class="switch">
-              <span class="switch__label-txt" data-text-expand="Expand Stats" data-text-shrink="Shrink Stats">Expand Stats</span>
-              <input id="expand-stats" class="switch-toggle" type="checkbox">
-              <label for="expand-stats"></label>
-            </div>
-          </div>
-          <div class="widget__content card__content">
-            <!-- Game Score -->
-            <div class="widget-game-result__section">
-              <div class="widget-game-result__section-inner">
-                <header class="widget-game-result__header widget-game-result__header--alt">
-                  <h3 class="widget-game-result__title">West League 2017 - Final Score</h3>
-                  <time class="widget-game-result__date" datetime="2017-16-10">Sunday, October 16</time>
-                </header>
-
-                <div class="widget-game-result__main widget-game-result__main--vertical">
-                  <!-- 1st Team -->
-                  <div class="widget-game-result__team widget-game-result__team--first">
-                    <figure class="widget-game-result__team-logo">
-                      <a href="#"><img src="assets/images/football/logos/alchemists-59x72.png" alt=""></a>
-                    </figure>
-                    <div class="widget-game-result__team-info">
-                      <h5 class="widget-game-result__team-name">The Alchemists</h5>
-                      <div class="widget-game-result__team-desc">4-1, 2-0, Away</div>
-                    </div>
-                    <div class="widget-game-result__team-score widget-game-result__team-score--winner">33</div>
-                  </div>
-                  <!-- 1st Team / End -->
-
-                  <!-- 2nd Team -->
-                  <div class="widget-game-result__team widget-game-result__team--second">
-                    <figure class="widget-game-result__team-logo">
-                      <a href="#"><img src="assets/images/football/logos/clover-71x62.png" alt=""></a>
-                    </figure>
-                    <div class="widget-game-result__team-info">
-                      <h5 class="widget-game-result__team-name">Lucky Clovers</h5>
-                      <div class="widget-game-result__team-desc">0-5, 0-2, Home</div>
-                    </div>
-                    <div class="widget-game-result__team-score">13</div>
-                  </div>
-                  <!-- 2nd Team / End -->
-                </div>
-              </div>
-            </div>
-            <!-- Game Score / End -->
-
-            <!-- Scoreboard -->
-            <div class="widget-game-result__section">
-              <div class="widget-game-result__table-stats">
-                <div class="table-responsive">
-                  <table class="table table__cell-center table-thead-color">
-                    <thead>
-                      <tr>
-                        <th>Scoreboard</th>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>T</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>Alchemists</th>
-                        <td>16</td>
-                        <td>7</td>
-                        <td>7</td>
-                        <td>3</td>
-                        <td>33</td>
-                      </tr>
-                      <tr>
-                        <th>Lucky Clovers</th>
-                        <td>7</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>6</td>
-                        <td>13</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <!-- Scoreboard / End -->
-
-            <!-- Game Statistics -->
-            <div class="widget-game-result__section">
-              <header class="widget-game-result__subheader card__subheader card__subheader--sm card__subheader--nomargins">
-                <h5 class="widget-game-result__subtitle">Game Statistics</h5>
-              </header>
-              <div class="widget-game-result__section-inner">
-
-                <!-- Progress: Ball Possesion -->
-                <div class="progress-double-wrapper">
-                  <h6 class="progress-title">Ball Possesion</h6>
-                  <div class="progress-inner-holder">
-                    <div class="progress__digit progress__digit--left progress__digit--highlight progress__digit--38">64%</div>
-                    <div class="progress__double">
-                      <div class="progress progress--battery">
-                        <div class="progress__bar progress__bar-width-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="progress progress--battery">
-                        <div class="progress__bar progress__bar--success progress__bar-width-40" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                    <div class="progress__digit progress__digit--right progress__digit--38">36%</div>
-                  </div>
-                </div>
-                <!-- Progress: Ball Possesion / End -->
-
-                <div class="widget-game-result__extra-stats">
-
-                  <!-- Progress: Total Yards -->
-                  <div class="progress-double-wrapper">
-                    <h6 class="progress-title">Total Yards</h6>
-                    <div class="progress-inner-holder">
-                      <div class="progress__digit progress__digit--left progress__digit--highlight progress__digit--38">501</div>
-                      <div class="progress__double">
-                        <div class="progress progress--battery">
-                          <div class="progress__bar progress__bar-width-80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress progress--battery">
-                          <div class="progress__bar progress__bar--success progress__bar-width-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="progress__digit progress__digit--right progress__digit--38">428</div>
-                    </div>
-                  </div>
-                  <!-- Progress: Total Yards / End -->
-
-                  <!-- Progress: 1st Downs -->
-                  <div class="progress-double-wrapper">
-                    <h6 class="progress-title">1st Downs</h6>
-                    <div class="progress-inner-holder">
-                      <div class="progress__digit progress__digit--left progress__digit--38">17</div>
-                      <div class="progress__double">
-                        <div class="progress progress--battery">
-                          <div class="progress__bar progress__bar-width-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress progress--battery">
-                          <div class="progress__bar progress__bar--success progress__bar-width-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="progress__digit progress__digit--right progress__digit--highlight progress__digit--38">24</div>
-                    </div>
-                  </div>
-                  <!-- Progress: 1st Downs / End -->
-
-                  <!-- Progress: Turnovers -->
-                  <div class="progress-double-wrapper">
-                    <h6 class="progress-title">Turnovers</h6>
-                    <div class="progress-inner-holder">
-                      <div class="progress__digit progress__digit--left progress__digit--highlight progress__digit--38">2</div>
-                      <div class="progress__double">
-                        <div class="progress progress--battery">
-                          <div class="progress__bar progress__bar-width-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress progress--battery">
-                          <div class="progress__bar progress__bar--success progress__bar-width-30" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="progress__digit progress__digit--right progress__digit--38">1</div>
-                    </div>
-                  </div>
-                  <!-- Progress: Turnovers / End -->
-
-                </div>
-              </div>
-            </div>
-            <!-- Game Statistics / End -->
-
-          </div>
-        </aside>
-        <!-- Widget: Game Result / End -->
-
         <!-- Widget: Trending News -->
-        <aside class="widget widget--sidebar card widget-tabbed">
+        {{!-- <aside class="widget widget--sidebar card widget-tabbed">
           <div class="widget__title card__header">
             <h4>Top Trending News</h4>
           </div>
@@ -971,7 +796,7 @@
 
             </div>
           </div>
-        </aside>
+        </aside> --}}
         <!-- Widget: Trending News / End -->
 
       </div>
