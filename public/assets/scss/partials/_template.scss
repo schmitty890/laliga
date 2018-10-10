@@ -6542,7 +6542,7 @@ input.header-mobile__search-control:focus {
     line-height: 1.5em;
     color: #3ffeca;
   }
-  .main-nav .main-nav__back {
+  .main-nav .back-arrow {
     width: 49px;
     height: 44px;
     position: absolute;
@@ -6554,7 +6554,7 @@ input.header-mobile__search-control:focus {
     background-repeat: no-repeat;
     background-size: 13px 8px;
   }
-  .main-nav .main-nav__back:hover {
+  .main-nav .back-arrow:hover {
     cursor: pointer;
   }
   .main-nav .main-nav__list > li > a::before {
@@ -7488,7 +7488,7 @@ input.header-mobile__search-control:focus {
 
 .footer-logo__img {
   max-width: 100%;
-  height: auto;
+  height: 100px;
 }
 
 .footer-logo--has-txt {

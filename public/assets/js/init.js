@@ -156,11 +156,6 @@
         $info_nav_li.has('ul').addClass('has-children');
 
         // Mobile Menu Toggle
-        $toggle_btn.on('click', function(){
-          console.log('ayo');
-          $wrapper.toggleClass('site-wrapper--has-overlay');
-        });
-
         $('.site-overlay, .main-nav__back').on('click', function(){
           $wrapper.toggleClass('site-wrapper--has-overlay');
         });
