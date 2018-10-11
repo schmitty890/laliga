@@ -14,17 +14,8 @@ $(document).on('click', '#header-mobile__toggle, .back-arrow, .site-overlay', fu
 //   // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
 //   window['digitalData'] = privateStuff;
 // });
-$.ajax({
-  type: 'GET',
-  url: '/api/digitalData'
-}).then(function(data) {
-  console.log('success make digitalData global');
-  var privateStuff = JSON.stringify(data);
-  privateStuff = JSON.parse(privateStuff);
 
-  // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
-  window['digitalData'] = privateStuff;
-});
+
 
 
 // laliga developers request

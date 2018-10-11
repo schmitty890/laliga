@@ -20,20 +20,6 @@ module.exports = function (app) {
     });
   });
 
-  // DigitalData object
-  app.get('/api/digitalData', function(req, res) {
-    res.json({
-      user: req.user
-    });
-  });
-
-  // LaLiga Developers
-  // app.get('/api/laligaDevelopers', function(req, res) {
-  //   res.json({
-  //     developers: ['Jason Schmitt']
-  //   })
-  // });
-
   /**
    * GET /login
    * Login page.

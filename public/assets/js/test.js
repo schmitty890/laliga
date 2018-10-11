@@ -6,7 +6,19 @@ const Test = (function() {
   const privateFunction = function() {
     //this can log the 'aTestVariable' because it is defined outside of this Module function, but aTestVariable is kept private to this Module
     if(aTestVariable) {
-      // console.log(aTestVariable);
+      console.log(aTestVariable);
+      $.ajax({
+        type: 'GET',
+        url: '/api/digitalData'
+      }).then(function(data) {
+        console.log('success make digitalData global');
+        var privateStuff = JSON.stringify(data);
+        privateStuff = JSON.parse(privateStuff);
+        console.log(privateStuff);
+        // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
+        // window['digitalData'] = privateStuff;
+      });
+
     }
   }
 
