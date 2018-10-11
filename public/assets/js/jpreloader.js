@@ -1,13 +1,5 @@
 /*
-* jPreLoader - jQuery plugin
-* Create a Loading Screen to preload images and content for you website
-*
-* Name:     jPreLoader.js
-* Author:   Kenny Ooi - http://www.inwebson.com
-* Date:     July 11, 2012
-* Version:    2.1
-* Example:    http://www.inwebson.com/demo/jpreloader-v2/
-*
+* TEMPLATE -- DO NOT MODIFY
 */
 
 (function($) {

@@ -1,8 +1,5 @@
 /**
-  * @package Alchemists HTML
-  *
-  * Template Scripts
-  * Created by Dan Fisher
+  * TEMPLATE -- DO NOT MODIFY
 */
 
 ;(function($){
