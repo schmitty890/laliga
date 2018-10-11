@@ -59,7 +59,9 @@ module.exports = function (app) {
       req.logIn(user, (err) => {
         if(err) { return next(err); }
         req.flash('success', { msg: 'Success! You are logged in.' });
-        res.redirect(req.session.returnTo || '/');
+        res.redirect('/');
+        // res.redirect to req.session.returnTo returned this to /api/digitalData endpoint - we want to redirect to homepage
+        // res.redirect(req.session.returnTo || '/');
       });
     })(req, res, next);
   });
