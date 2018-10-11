@@ -12,18 +12,12 @@ const cheerio = require('cheerio');
 // =============================================================
 module.exports = function(app) {
   // DigitalData object
-  app.get('/api/digitalData', function(req, res) {
-    res.send({
-      user: req.user
-    });
-  });
+  // app.get('/api/digitalData', function(req, res) {
+  //   res.json({
+  //     user: req.user
+  //   });
+  // });
 
-  // LaLiga Developers
-  app.get('/api/laligaDevelopers', function(req, res) {
-    res.json({
-      developers: ['Jason Schmitt']
-    })
-  });
 // here are two examples of scraping / nyt and these will be converted to use app.get('/api/scraping') instead of exports.getScraping
 // /**
 //  * GET /api/scraping
