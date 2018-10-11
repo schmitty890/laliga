@@ -4,3 +4,46 @@
 $(document).on('click', '#header-mobile__toggle, .back-arrow, .site-overlay', function() {
   $('.site-wrapper').toggleClass('site-wrapper--has-overlay');
 });
+
+// the digitalData request
+// $.getJSON("api/digitalData", function(data) {
+//   console.log('digitalData');
+//   var privateStuff = JSON.stringify(data);
+//   privateStuff = JSON.parse(privateStuff);
+
+//   // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
+//   window['digitalData'] = privateStuff;
+// });
+$.ajax({
+  type: 'GET',
+  url: '/api/digitalData'
+}).then(function(data) {
+  console.log('success make digitalData global');
+  var privateStuff = JSON.stringify(data);
+  privateStuff = JSON.parse(privateStuff);
+
+  // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
+  window['digitalData'] = privateStuff;
+});
+
+
+// laliga developers request
+// $.getJSON("api/laligaDevelopers", function(data) {
+//   console.log('laligaDevelopers');
+//   var privateStuff = JSON.stringify(data);
+//   privateStuff = JSON.parse(privateStuff);
+
+//   // expose developers array to the client side
+//   window['laliga'] = privateStuff;
+// });
+// $.ajax({
+//   type: 'GET',
+//   url: '/api/laligaDevelopers'
+// }).then(function(data) {
+//   console.log('success make laligaDevelopers global');
+//   var privateStuff = JSON.stringify(data);
+//   privateStuff = JSON.parse(privateStuff);
+
+//   // expose developers array to the client side
+//   window['laliga'] = privateStuff;
+// });
