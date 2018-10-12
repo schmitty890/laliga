@@ -15,7 +15,7 @@ const babel = require('gulp-babel');
 // when served, watch files. call browser-sync
 gulp.task('serve', ['browser-sync'], function() {
   gulp.watch('public/assets/scss/partials/*.scss', ['sass']);
-  gulp.watch('public/assets/js/*.js', ['concatScripts']);
+  gulp.watch('public/assets/js/*/*.js', ['concatScripts']);
 });
 
 // browser-sync call nodemon
@@ -72,7 +72,7 @@ gulp.task('clean', function() {
 gulp.task('concatScripts', function() {
   console.log('gulp concatScripts task');
   return gulp.src([
-    './public/assets/js/*.js'
+    './public/assets/js/*/*.js'
   ])
     .pipe(maps.init())
     .pipe(babel({
