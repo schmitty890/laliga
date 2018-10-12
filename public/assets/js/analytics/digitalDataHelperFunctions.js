@@ -22,11 +22,11 @@ const DigitalDataFunctions = (function() {
   };
 
   const getScreenWidth = function() {
-    return screen.width;
+    return $(window).width();
   };
 
   const getScreenHeight = function() {
-    return screen.height;
+    return $(window).height();
   };
 
   // return any functions to be used throughout our application
