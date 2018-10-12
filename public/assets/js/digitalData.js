@@ -7,25 +7,8 @@ $( document ).ready(function() {
     // Our digitalData object
     var digitalData = {
       user: data.data,
-      pageType: getPageType()
+      pageType: DigitalDataFunctions.getPageType()
     };
-
-    function getPageType() {
-        var page;
-        var pagePath = window.location.pathname;
-        switch(pagePath) {
-          case "/":
-            page = "hp";
-            break;
-          case "/facts":
-            page = "facts";
-            break;
-          default:
-            page = "n/a";
-        }
-        return page;
-    }
-
     // console.log(digitalData);
 
     // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
