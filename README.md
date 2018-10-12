@@ -1,6 +1,4 @@
-# HomeStead
-
-- Visit [LaLiga](http://www.laligadelcaballeroordinario.com/)
+# LaLiga
 
 ## Purpose
 
@@ -45,20 +43,20 @@ This is our Fantasy Football League Website.
 Before you push your branch up to the `develop` branch, ensure you lint your code.
 
 run `npm run lint` this will show if you have any ESLint errors or warnings.
-If you have any errors, please fix them. if you have warnings that could slide, push your code up or talk with a team member.
+If you have any errors, please fix them. If you have warnings that could slide, push your code up or talk with a team member.
 
 
 # Development 👨‍💻
 
-The command `npm start` will automatically launch the project. navigate to `http://localhost:3000/`
+The command `npm start` or `gulp` will automatically launch the project. Navigate to `http://localhost:8080/`
 
 The files watched by gulp are the client js and sass files.
 
-Client side js files are located at `public/assets/js/*.js`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace.
+Client side js files are located at `public/assets/js/*/*.js`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace. The gulp build will replace your /build folder with the updated minified js files.
 
-Sass files are located at `sass/partials/*.scss`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace.
+Sass files are located at `sass/partials/*.scss`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace. The gulp build will replace your /build folder with the updated minified css files.
 
-If you're editing any file outside of `public/assets/js` or `sass/partials`, we recommend running `npm run watch`, this runs nodemon, which watches all of our files.
+If you're editing any file outside of `public/assets/js/*` or `sass/partials`, we recommend running `npm run watch`, this runs nodemon, which watches all of our files. Or if you edit any of these files, stop the server from listening and restart the server manually with `npm start` or `gulp`.
 
 
 ### Branching process
