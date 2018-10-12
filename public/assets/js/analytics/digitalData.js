@@ -7,7 +7,9 @@ $( document ).ready(function() {
     // Our digitalData object
     var digitalData = {
       user: data.data,
-      pageType: DigitalDataFunctions.getPageType()
+      pageType: DigitalDataFunctions.getPageType(),
+      screenHeight: DigitalDataFunctions.getScreenHeight(),
+      screenWidth: DigitalDataFunctions.getScreenWidth()
     };
     // console.log(digitalData);
 

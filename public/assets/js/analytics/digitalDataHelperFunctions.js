@@ -19,11 +19,21 @@ const DigitalDataFunctions = (function() {
           page = "n/a";
       }
       return page;
-  }
+  };
+
+  const getScreenWidth = function() {
+    return screen.width;
+  };
+
+  const getScreenHeight = function() {
+    return screen.height;
+  };
 
   // return any functions to be used throughout our application
   return {
-    getPageType: getPageType
+    getPageType: getPageType,
+    getScreenWidth: getScreenWidth,
+    getScreenHeight: getScreenHeight
   }
 })(); // self invoke the Module so it can be called later
 
