@@ -7,7 +7,7 @@ The League of Ordinary Gentlemen
 
 This is our Fantasy Football League Website. This site is made for fun to practice our development skills, a full stack node application where we display league news, stats, trash talk, random league facts, meetups, photos and more. This is a constant work in progress as we are moonlighting this webapp. Enjoy!
 
-- [laliga](http://www.laligadelcaballeroordinario.com/)
+Visit the La Liga website at  [laligadelcaballeroordinario.com](http://www.laligadelcaballeroordinario.com/)
 
 ## Application Structure
     .
