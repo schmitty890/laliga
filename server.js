@@ -20,6 +20,7 @@ const expressStatusMonitor = require('express-status-monitor');
 const sass = require('node-sass-middleware');
 const multer = require('multer');
 const exphbs = require('express-handlebars');
+const _ = require('lodash');
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
 const momentFromNowTime = require('./views/helpers/momentFromNowTime');
 
