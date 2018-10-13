@@ -11,71 +11,77 @@ Visit the La Liga website at  [laligadelcaballeroordinario.com](http://www.lalig
 
 ## Application Structure
     .
-    ├── config
-    │   └── passport.js
-    ├── controllers
-    │   ├── api-routes.js
-    │   ├── auth-routes.js
-    │   └── html-routes.js
-    ├── gulp-tasks
-    │   └── serve.js
-    ├── models
-    │   ├── User.js
-    │   └── index.js
-    ├── public
+    ├── build                                             # build folder is generated when gulp tasks run
+    │   ├── css                                           # built css folder
+    │   │   ├── styles.min.css                            # concatenated and minified css build (the css file used in our app)
+    │   │   └── styles.min.css.map                        # minified css source map to map styles to correct stylesheets in console for easier debugging purposes
+    │   └── js                                            # built js folder
+    │       ├── app.js                                    # concatenated js build
+    │       ├── app.min.js                                # concatenated and minified js build (the client side js used in our app)
+    │       └── app.min.js.map                            # minified js source map to map back to correct file in the browser for easier debugging purposes
+    ├── config                                            # config folder holds passport configuration
+    │   └── passport.js                                   # passport user authentication middleware
+    ├── controllers                                       # controllers folder holds application routes
+    │   ├── api-routes.js                                 # routes for all our own api calls
+    │   ├── auth-routes.js                                # routes for authenticated users
+    │   └── html-routes.js                                # routes for all users
+    ├── gulp-tasks                                        # gulp-tasks folder holds gulp serve file
+    │   └── serve.js                                      # serve.js preforms scss and js concatenation and minification (converts scss to css and concats and minfies css and client js files and creates build folder and files)
+    ├── models                                            # models folder holds our data models
+    │   ├── User.js                                       # user model
+    │   └── index.js                                      # export all models to be used throughout the app
+    ├── public                                            # public folder holds images/client js/scss
     │   └── assets
-    │       ├── images
-    │       ├── js
-    │       │   ├── analytics
+    │       ├── images                                    # all images live here
+    │       ├── js                                        # client side js folder
+    │       │   ├── analytics                             # client side analytics scripts
     │       │   │   ├── digitalData.js
     │       │   │   └── digitalDataHelperFunctions.js
-    │       │   ├── custom
+    │       │   ├── custom                                # client side custom js scripts
     │       │   │   ├── main.js
     │       │   │   └── modular-example.js
-    │       │   ├── mobile-menu
+    │       │   ├── mobile-menu                           # client side mobile menu
     │       │   │   └── event-handlers.js
-    │       │   └── template
+    │       │   └── template                              # client side js for website template
     │       │       ├── core.js
     │       │       ├── init.js
     │       │       └── jpreloader.js
-    │       └── scss
-    │           ├── partials
-    │           │   ├── _404.scss
-    │           │   ├── _classes.scss
-    │           │   ├── _default.scss
-    │           │   ├── _template.scss
-    │           │   └── _variables.scss
-    │           └── styles.scss
-    ├── test
+    │       └── scss                                      # scss folder
+    │           ├── partials                              # scss partials, partials are indicated with _
+    │           │   ├── _404.scss                         # 404 not found page styles
+    │           │   ├── _classes.scss                     # generic classes used across app
+    │           │   ├── _default.scss                     # default styles used across app (provided from template)
+    │           │   ├── _template.scss                    # template styles used across app (provided from template)
+    │           │   └── _variables.scss                   # variables used across app
+    │           └── styles.scss                           # read all partials into styles.scss
+    ├── test                                              # unit tests
     │   ├── app.js
     │   └── models.js
-    ├── views
-    │   ├── account
+    ├── views                                             # handlebar views
+    │   ├── account                                       # account page views
     │   │   ├── forgot.handlebars
     │   │   ├── login.handlebars
     │   │   ├── profile.handlebars
     │   │   ├── reset.handlebars
     │   │   └── signup.handlebars
-    │   ├── helpers
+    │   ├── helpers                                       # handlebar helper functions
     │   │   └── momentFromTimeNow.js
-    │   ├── layouts
+    │   ├── layouts                                       # handlebar main template needed for file structure format
     │   │   └── main.handlebars
-    │   ├── partials
-    │   │   ├── footer.handlebars
-    │   │   ├── header.handlebars
-    │   │   └── nav.handlebars
-    │   ├── 404.handlebars
-    │   └── index.handlebars
-    ├── .editorconfig
-    ├── .eslintignore
-    ├── .eslintrc.js
-    ├── .gitignore
-    ├── README.md
-    ├── gulpfile.js
-    ├── .gitignore
-    ├── package-lock.json
-    ├── package.json
-    └── server.js
+    │   ├── partials                                      # handlebar partials
+    │   │   ├── footer.handlebars                         # handlebar footer template
+    │   │   ├── header.handlebars                         # handlebar header template
+    │   │   └── nav.handlebars                            # handlebar navigation template
+    │   ├── 404.handlebars                                # handlebar 404 page
+    │   └── index.handlebars                              # handlebar index page
+    ├── .editorconfig                                     # editorconfig helps developers define and maintain consistent coding styles between different editors and IDEs
+    ├── .eslintignore                                     # eslint ignores these folders/files
+    ├── .eslintrc.js                                      # eslint to find errors in code prior to pushing branches
+    ├── .gitignore                                        # specified intentionally untracked files to ignore
+    ├── README.md                                         # this page
+    ├── gulpfile.js                                       # gulpfile.js needed for gulp tasks
+    ├── package.json                                      # specifics of npm packages and application
+    └── server.js                                         # kickoff the app
 
 
 
@@ -127,9 +133,9 @@ The command `npm start` or `gulp` will automatically launch the project. Navigat
 
 The files watched by gulp are the client js and sass files.
 
-Client side js files are located at `public/assets/js/*/*.js`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace. The gulp build will replace your /build folder with the updated minified js files.
+Client side js files are located at `public/assets/js/*/*.js`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace. The gulp build will generate/replace your `/build` folder with the updated minified js files.
 
-Sass files are located at `sass/partials/*.scss`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace. The gulp build will replace your /build folder with the updated minified css files.
+Sass files are located at `sass/partials/*.scss`. Editing these files and saving will kick off a gulp build and auto refresh your development workspace. The gulp build will replace your `/build` folder with the updated minified css files.
 
 If you're editing any file outside of `public/assets/js/*` or `sass/partials`, we recommend running `npm run watch`, this runs nodemon, which watches all of our files. Or if you edit any of these files, stop the server from listening and restart the server manually with `npm start` or `gulp`.
 
