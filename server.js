@@ -20,8 +20,8 @@ const expressStatusMonitor = require('express-status-monitor');
 const sass = require('node-sass-middleware');
 const multer = require('multer');
 const exphbs = require('express-handlebars');
-
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
+const momentFromNowTime = require('./views/helpers/momentFromNowTime');
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -57,6 +57,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   helpers: {
+    momentFromNowTime: momentFromNowTime
   }
 }));
 app.set('view engine', 'handlebars');
