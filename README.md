@@ -4,6 +4,75 @@
 
 This is our Fantasy Football League Website.
 
+## Application Structure
+    .
+    ├── config
+    │   └── passport.js
+    ├── controllers
+    │   ├── api-routes.js
+    │   ├── auth-routes.js
+    │   └── html-routes.js
+    ├── gulp-tasks
+    │   └── serve.js
+    ├── models
+    │   ├── User.js
+    │   └── index.js
+    ├── public
+    │   └── assets
+    │       ├── images
+    │       ├── js
+    │       │   ├── analytics
+    │       │   │   ├── digitalData.js
+    │       │   │   └── digitalDataHelperFunctions.js
+    │       │   ├── custom
+    │       │   │   ├── main.js
+    │       │   │   └── modular-example.js
+    │       │   ├── mobile-menu
+    │       │   │   └── event-handlers.js
+    │       │   └── template
+    │       │       ├── core.js
+    │       │       ├── init.js
+    │       │       └── jpreloader.js
+    │       └── scss
+    │           ├── partials
+    │           │   ├── _404.scss
+    │           │   ├── _classes.scss
+    │           │   ├── _default.scss
+    │           │   ├── _template.scss
+    │           │   └── _variables.scss
+    │           └── styles.scss
+    ├── test
+    │   ├── app.js
+    │   └── models.js
+    ├── views
+    │   ├── account
+    │   │   ├── forgot.handlebars
+    │   │   ├── login.handlebars
+    │   │   ├── profile.handlebars
+    │   │   ├── reset.handlebars
+    │   │   └── signup.handlebars
+    │   ├── helpers
+    │   │   └── momentFromTimeNow.js
+    │   ├── layouts
+    │   │   └── main.handlebars
+    │   ├── partials
+    │   │   ├── footer.handlebars
+    │   │   ├── header.handlebars
+    │   │   └── nav.handlebars
+    │   ├── 404.handlebars
+    │   └── index.handlebars
+    ├── .editorconfig
+    ├── .eslintignore
+    ├── .eslintrc.js
+    ├── .gitignore
+    ├── README.md
+    ├── gulpfile.js
+    ├── .gitignore
+    ├── package-lock.json
+    ├── package.json
+    └── server.js
+
+
 
 ## Tech Used
 
@@ -12,6 +81,7 @@ This is our Fantasy Football League Website.
 - [Mongo](https://www.npmjs.com/package/connect-mongo)
 - [Express.js](https://www.npmjs.com/package/express)
 - [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
+- [Lodash](https://lodash.com/)
 - [Moment.js](https://momentjs.com/)
 - [Bootstrap](https://getbootstrap.com/docs/3.3/)
 - [mlab](https://mlab.com/)
