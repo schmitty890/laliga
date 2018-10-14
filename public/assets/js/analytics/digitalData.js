@@ -1,4 +1,5 @@
-$( document ).ready(function() {
+// $( document ).ready(function() {
+// TODO: make this modular
   console.log('analytics script start');
   $.ajax({
     type: 'GET',
@@ -16,4 +17,4 @@ $( document ).ready(function() {
     // make privateStuff public for debugging/analytic purposes as our digitalData object in the console
     window['digitalData'] = digitalData;
   });
-});
+// });

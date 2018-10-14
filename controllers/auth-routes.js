@@ -25,6 +25,21 @@ module.exports = function (app) {
     });
   });
 
+  /**
+   * GET /story-post
+   * Account page
+   * Ensure user is authenticated in passport first then render story-post page
+   */
+  app.get('/story-post', passportConfig.isAuthenticated, function(req, res) {
+    const hbsObject = {
+      user: req.user
+    }
+    res.render('story-post', {
+      title: 'Story Post',
+      hbsObject: hbsObject
+    });
+  });
+
 
   /**
    * POST /account/profile

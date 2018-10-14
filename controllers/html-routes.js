@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const passport = require('passport');
 const User = require('../models/User');
+var db = require("../models");
 
 const randomBytesAsync = promisify(crypto.randomBytes);
 
@@ -10,14 +11,21 @@ module.exports = function (app) {
 
   // Home Page
   app.get('/', function (req, res) {
-    const hbsObject = {
+    var hbsObject = {
       user: req.user
     }
-    // console.log(hbsObject);
-    res.render('index', {
-      title: 'Home',
-      hbsObject: hbsObject
+    db.StoryPost.find({}, null, { sort: {'_id': -1} }, function(error, data) {
+      if (error) throw error;
+      // console.log(data);
+
+      hbsObject.storyPost = data;
+      console.log(hbsObject);
+      res.render('index', {
+        title: 'Home',
+        hbsObject: hbsObject
+      });
     });
+
   });
 
   /**

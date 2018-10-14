@@ -13,10 +13,22 @@ const cheerio = require('cheerio');
 module.exports = function(app) {
   // DigitalData object
   app.get('/api/digitalData', function(req, res) {
-
     res.json({
       data: req.user
     });
+  });
+
+  // Route for saving an Article's associated comment
+  app.post("/story-post", function(req, res) {
+    // Create a new StoryPost and pass the req.body to the entry
+    db.StoryPost.create(req.body)
+      .then(function(dbStoryPost) {
+        // If saved successfully, send the the new User document to the client
+        res.json(dbStoryPost);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
   });
 
 
