@@ -105,7 +105,7 @@
                   </tr>
                 </thead>
                 <tbody>
-
+                  {{#each hbsObject.innercitydgkStats}} {{#each this.innercitydgk-stats-2018}}
                   <tr>
                     <td>
                       <div class="team-meta">
@@ -113,107 +113,18 @@
                           <img src="assets/images/samples/logos/pirates_shield.png" alt="">
                         </figure>
                         <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
+                          <h6 class="team-meta__name">{{this.team}}</h6>
+                          <span class="team-meta__place">{{this.owner}}</span>
                         </div>
                       </div>
                     </td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>0</td>
+                    <td>{{this.wins}}</td>
+                    <td>{{this.losses}}</td>
+                    <td>{{this.ties}}</td>
                     {{!-- <td>316</td>
                     <td>213</td> --}}
                   </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/sharks_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>9</td>
-                    <td>2</td>
-                    <td>0</td>
-                    {{!-- <td>293</td>
-                    <td>197</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/football/logos/alchemists-21x25.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>8</td>
-                    <td>3</td>
-                    <td>0</td>
-                    {{!-- <td>231</td>
-                    <td>213</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>1</td>
-                    {{!-- <td>224</td>
-                    <td>187</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/red_wings_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>6</td>
-                    <td>5</td>
-                    <td>0</td>
-                    {{!-- <td>218</td>
-                    <td>201</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/red_wings_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>6</td>
-                    <td>5</td>
-                    <td>0</td>
-                    {{!-- <td>218</td>
-                    <td>201</td> --}}
-                  </tr>
+                  {{/each}} {{/each}}
                 </tbody>
               </table>
             </div>
@@ -241,7 +152,7 @@
                   </tr>
                 </thead>
                 <tbody>
-
+                  {{#each hbsObject.yuppyvilleStats}} {{#each this.yuppyville-stats-2018}}
                   <tr>
                     <td>
                       <div class="team-meta">
@@ -249,107 +160,18 @@
                           <img src="assets/images/samples/logos/pirates_shield.png" alt="">
                         </figure>
                         <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
+                          <h6 class="team-meta__name">{{this.team}}</h6>
+                          <span class="team-meta__place">{{this.owner}}</span>
                         </div>
                       </div>
                     </td>
-                    <td>10</td>
-                    <td>1</td>
-                    <td>0</td>
+                    <td>{{this.wins}}</td>
+                    <td>{{this.losses}}</td>
+                    <td>{{this.ties}}</td>
                     {{!-- <td>316</td>
                     <td>213</td> --}}
                   </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/sharks_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>9</td>
-                    <td>2</td>
-                    <td>0</td>
-                    {{!-- <td>293</td>
-                    <td>197</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/football/logos/alchemists-21x25.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>8</td>
-                    <td>3</td>
-                    <td>0</td>
-                    {{!-- <td>231</td>
-                    <td>213</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>1</td>
-                    {{!-- <td>224</td>
-                    <td>187</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>1</td>
-                    {{!-- <td>224</td>
-                    <td>187</td> --}}
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/images/samples/logos/ocean_kings_shield.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Team Name</h6>
-                          <span class="team-meta__place">Player Name</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>1</td>
-                    {{!-- <td>224</td>
-                    <td>187</td> --}}
-                  </tr>
+                  {{/each}} {{/each}}
                 </tbody>
               </table>
             </div>

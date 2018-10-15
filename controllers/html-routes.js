@@ -4,6 +4,8 @@ const nodemailer = require('nodemailer');
 const passport = require('passport');
 const User = require('../models/User');
 var db = require("../models");
+var innercitydgkStats = require('../data/innercitydgk-stats.json');
+var yuppyvilleStats = require('../data/yuppyville-stats.json');
 
 const randomBytesAsync = promisify(crypto.randomBytes);
 
@@ -12,7 +14,9 @@ module.exports = function (app) {
   // Home Page
   app.get('/', function (req, res) {
     var hbsObject = {
-      user: req.user
+      user: req.user,
+      yuppyvilleStats: yuppyvilleStats,
+      innercitydgkStats: innercitydgkStats
     }
     db.StoryPost.find({}, null, { sort: {'_id': -1} }, function(error, data) {
       if (error) throw error;
