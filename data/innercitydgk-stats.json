@@ -4,7 +4,7 @@
     "team": "SASsy Pants",
     "owner": "Sarah Ann Stevens",
     "division": "Inner City DGK",
-    "wins": 4,
+    "wins": 5,
     "losses": 1,
     "ties": 0
   }, {
@@ -12,27 +12,27 @@
     "owner": "Ben Humble",
     "division": "Inner City DGK",
     "wins": 4,
-    "losses": 1,
+    "losses": 2,
     "ties": 0
   }, {
     "team": "Kandy Monster",
     "owner": "Kyle Anderson",
     "division": "Inner City DGK",
     "wins": 3,
-    "losses": 2,
+    "losses": 3,
     "ties": 0
   }, {
     "team": "BURRITO BANDIDOS",
     "owner": "Kyle Tighe",
     "division": "Inner City DGK",
-    "wins": 3,
+    "wins": 4,
     "losses": 2,
     "ties": 0
   }, {
     "team": "Chef BoyarDeez Nuts",
     "owner": "Phillip Snyder",
     "division": "Inner City DGK",
-    "wins": 1,
+    "wins": 2,
     "losses": 4,
     "ties": 0
   }, {
@@ -40,7 +40,7 @@
     "owner": "Hugh Snyder",
     "division": "Inner City DGK",
     "wins": 0,
-    "losses": 5,
+    "losses": 6,
     "ties": 0
   }]
 }]
