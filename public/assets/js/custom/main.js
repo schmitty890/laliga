@@ -1,6 +1,6 @@
 (function($) {
   // Place JavaScript code here...
-  console.log(`testing testing!!! ;) :) :P !`);
+  console.log(`testing testing!!! ;) :) !?`);
 })(jQuery);
 
 $(document).ready(function()
