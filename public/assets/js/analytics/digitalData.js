@@ -1,6 +1,6 @@
 // $( document ).ready(function() {
 // TODO: make this modular
-  console.log('analytics script start');
+  console.log('analytics script start!');
   $.ajax({
     type: 'GET',
     url: '/api/digitalData'
