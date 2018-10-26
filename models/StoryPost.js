@@ -10,8 +10,17 @@ var StoryPostSchema = new Schema({
   },
   comment: {
     type: String
+  },
+  image: {
+    type: String
+  },
+  user: {
+    type: String
+  },
+  logo: {
+    type: String
   }
-});
+}, { timestamps: true });
 
 // This creates our model from the above schema, using mongoose's model method
 var StoryPost = mongoose.model("StoryPost", StoryPostSchema);

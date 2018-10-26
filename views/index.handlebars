@@ -24,32 +24,35 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     <div class="posts__cat">
-                      <span class="label posts__cat-label">The Team</span>
+                      {{!-- <span class="label posts__cat-label">The Team</span> --}}
                     </div>
-                    <a href="#"><img src="https://via.placeholder.com/377x270" alt=""></a>
+                    {{#if this.image}}
+                      <a href="#"><img src="{{this.image}}" alt=""/></a>
+                    {{/if}}
                   </figure>
                   <div class="posts__inner card__content">
-                    <a href="#" class="posts__cta"></a>
-                    <time datetime="2017-09-14" class="posts__date">August 28th, 2018</time>
+                    <time datetime="2017-09-14" class="posts__date">{{momentFromNowTime this.createdAt}}</time>
                     <h6 class="posts__title"><a href="#">{{this.title}}</a></h6>
                     <div class="posts__excerpt">
-                      Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris.
+                      {{this.comment}}
                     </div>
                   </div>
                   <footer class="posts__footer card__footer">
                     <div class="post-author">
-                      <figure class="post-author__avatar">
-                        <img src="assets/images/football/samples/avatar-6-xs.jpg" alt="Post Author Avatar">
-                      </figure>
+                      {{#if this.logo}}
+                        <figure class="post-author__avatar">
+                          <img src="{{this.logo}}" alt="{{this.user}}">
+                        </figure>
+                      {{/if}}
                       <div class="post-author__info">
-                        <h4 class="post-author__name">Ginny Valentine</h4>
+                        <h4 class="post-author__name">{{this.user}}</h4>
                       </div>
                     </div>
-                    <ul class="post__meta meta">
+                    {{!-- <ul class="post__meta meta">
                       <li class="meta__item meta__item--views">2369</li>
                       <li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
                       <li class="meta__item meta__item--comments"><a href="#">18</a></li>
-                    </ul>
+                    </ul> --}}
                   </footer>
                 </div>
               </div>

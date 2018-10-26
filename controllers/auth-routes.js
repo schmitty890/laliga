@@ -61,6 +61,7 @@ module.exports = function (app) {
       if(err) { return next(err); }
       user.email = req.body.email || '';
       user.teamName = req.body.teamName || '';
+      user.logo = req.body.logo || '';
       user.profile.name = req.body.name || '';
       user.profile.gender = req.body.gender || '';
       user.profile.location = req.body.location || '';
