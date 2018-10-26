@@ -6,19 +6,22 @@ const DigitalDataFunctions = (function() {
 
   //another function private to Module
   const getPageType = function() {
-      var page;
-      var pagePath = window.location.pathname;
-      switch(pagePath) {
-        case "/":
-          page = "hp";
-          break;
-        case "/facts":
-          page = "facts";
-          break;
-        default:
-          page = "n/a";
-      }
-      return page;
+    var page;
+    var pagePath = window.location.pathname;
+    switch(pagePath) {
+      case "/":
+        page = "hp";
+        break;
+      case "/facts":
+        page = "facts";
+        break;
+      case "/account":
+        page = "account";
+        break;
+      default:
+        page = "n/a";
+    }
+    return page;
   };
 
   const getScreenWidth = function() {
