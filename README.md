@@ -83,6 +83,7 @@ Visit the La Liga website at  [laligadelcaballeroordinario.com](http://www.lalig
     ├── package.json                                      # specifics of npm packages and application
     └── server.js                                         # kickoff the app
 
+Get up with Jason Schmitt if you want to know the environment variables for the ignored .env file - functionality will not work for api keys and secret creds without those.
 
 
 ## Tech Used
