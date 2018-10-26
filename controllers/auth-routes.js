@@ -60,6 +60,7 @@ module.exports = function (app) {
     User.findById(req.user.id, (err, user) => {
       if(err) { return next(err); }
       user.email = req.body.email || '';
+      user.teamName = req.body.teamName || '';
       user.profile.name = req.body.name || '';
       user.profile.gender = req.body.gender || '';
       user.profile.location = req.body.location || '';
