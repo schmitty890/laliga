@@ -1,10 +1,12 @@
 
-$(document).on('click', '.header-logo__img', function() {
+$(document).on('click', '.data-user-name', function() {
+  console.log('ga test');
   // ga('send', 'event', 'button', 'click', 'main logo desktop');
-  ga('send', 'event', {
-    eventCategory: 'logo click take 2',
-    eventAction: 'click',
-    eventLabel: event.target.href
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Videos',
+    eventAction: 'play',
+    eventLabel: 'Fall Campaign'
   });
 });
 
