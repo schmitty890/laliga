@@ -41,7 +41,7 @@ const app = express();
  * Connect to MongoDB.
  */
 var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/laliga';
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.on('error', (err) => {
   console.error(err);
   console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
