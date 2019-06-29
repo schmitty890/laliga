@@ -34,6 +34,7 @@ $(document).on('click', '#submit-fact', function(e) {
                   ${data}
               </div>
             `;
+            $("#fact-description").html('');
             $('#fact-alert-msg').html('');
             $('#fact-alert-msg').append(html);
           });
