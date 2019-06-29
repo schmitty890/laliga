@@ -68,11 +68,43 @@
         <nav class="main-nav clearfix">
           <ul class="main-nav__list">
             <div class="header-mobile__logo"><span class="back-arrow"></span>
-              <a href="/"><img src="/public/assets/images/logo.png" srcset="/public/assets/images/logo.png 2x" alt="Alchemists" class="header-mobile__logo-img"></a>
+              <a href="/"><img src="/public/assets/images/logo.png" srcset="/public/assets/images/logo.png 2x" alt="La Liga" class="header-mobile__logo-img"></a>
             </div>
             <li class=""><a href="/">Home</a></li>
-            <li class=""><a href="#">All Time Stats</a></li>
-            <li class=""><a href="/facts">League Facts</a></li>
+            <li class=""><a href="/history">History</a>
+              <ul class="main-nav__sub">
+                <li><a href="/all-time-stats">All Time Stats</a></li>
+                <li><a href="/facts">League Facts</a></li>
+                <li><a href="/champs">Champs</a>
+                  <ul class="main-nav__sub-2">
+                    <li><a href="/champs/2014">2014</a></li>
+                    <li><a href="/champs/2015">2015</a></li>
+                    <li><a href="/champs/2016">2016</a></li>
+                    <li><a href="/champs/2017">2017</a></li>
+                    <li><a href="/champs/2018">2018</a></li>
+                  </ul>
+                </li>
+                <li><a href="/deckers">Deckers</a>
+                  <ul class="main-nav__sub-2">
+                    <li><a href="/deckers">Overview</a></li>
+                    <li><a href="/deckers/2014">2014</a></li>
+                    <li><a href="/deckers/2015">2015</a></li>
+                    <li><a href="/deckers/2016">2016</a></li>
+                    <li><a href="/deckers/2017">2017</a></li>
+                    <li><a href="/deckers/2018">2018</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            {{#if hbsObject.user}}
+            <li class=""><a href="/betting-center">Betting Center</a>
+              <ul class="main-nav__sub">
+                <li><a href="/betting-center">Overview</a></li>
+                <li><a href="/your-bets">Your Bets</a></li>
+                <li><a href="/your-bets-history">Your Bets History</a></li>
+              </ul>
+            </li>
+            {{/if}}
             {{#if hbsObject.user}}
               <li class=""><a href="/logout">Logout</a></li>
             {{else}}

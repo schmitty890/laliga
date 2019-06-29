@@ -12,7 +12,7 @@ module.exports = function (app) {
   /**
    * GET /account
    * Account page
-   * Ensure user is authenticated in passport first then render account page
+   * Ensure user is authenticated in passport first then render this page
    */
   app.get('/account', passportConfig.isAuthenticated, function(req, res) {
     console.log('SUCCESS!!!!!!');
@@ -28,7 +28,7 @@ module.exports = function (app) {
   /**
    * GET /story-post
    * Account page
-   * Ensure user is authenticated in passport first then render story-post page
+   * Ensure user is authenticated in passport first then render this page
    */
   app.get('/story-post', passportConfig.isAuthenticated, function(req, res) {
     const hbsObject = {
@@ -37,6 +37,72 @@ module.exports = function (app) {
 
     res.render('story-post', {
       title: 'Story Post',
+      hbsObject: hbsObject
+    });
+  });
+
+
+  /**
+   * GET /facts
+   * facts page
+   * Ensure user is authenticated in passport first then render this page
+   */
+  app.get('/facts', passportConfig.isAuthenticated, function(req, res) {
+    const hbsObject = {
+      user: req.user
+    }
+
+    res.render('facts', {
+      title: 'Facts',
+      hbsObject: hbsObject
+    });
+  });
+
+  /**
+   * GET /all-time-stats
+   * all-time-stats page
+   * Ensure user is authenticated in passport first then render this page
+   */
+  app.get('/all-time-stats', passportConfig.isAuthenticated, function(req, res) {
+    const hbsObject = {
+      user: req.user
+    }
+
+    res.render('all-time-stats', {
+      title: 'all-time-stats',
+      hbsObject: hbsObject
+    });
+  });
+
+  /**
+   * GET /champs
+   * champs page
+   * Ensure user is authenticated in passport first then render this page
+   */
+  app.get('/champs', passportConfig.isAuthenticated, function(req, res) {
+    const hbsObject = {
+      user: req.user
+    }
+
+    res.render('champs', {
+      title: 'champs',
+      hbsObject: hbsObject
+    });
+  });
+
+  /**
+   * GET /champs
+   * champs page
+   * Ensure user is authenticated in passport first then render this page
+   */
+  app.get('/champs/:champion', passportConfig.isAuthenticated, function(req, res) {
+    console.log(req.params.champion);
+    const hbsObject = {
+      user: req.user
+    }
+
+    res.render('champs', {
+      title: 'champs',
       hbsObject: hbsObject
     });
   });

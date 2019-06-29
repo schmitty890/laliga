@@ -24,7 +24,7 @@ module.exports = function(app) {
     db.StoryPost.create(req.body)
       .then(function(dbStoryPost) {
         // If saved successfully, send the the new User document to the client
-        res.json(dbStoryPost);
+        res.redirect('/');
       })
       .catch(function(err) {
         res.json(err);
