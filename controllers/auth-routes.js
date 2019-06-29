@@ -34,6 +34,7 @@ module.exports = function (app) {
     const hbsObject = {
       user: req.user
     }
+
     res.render('story-post', {
       title: 'Story Post',
       hbsObject: hbsObject

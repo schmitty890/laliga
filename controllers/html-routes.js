@@ -23,6 +23,7 @@ module.exports = function (app) {
       // console.log(data);
 
       hbsObject.storyPost = data;
+      console.log('//////////////////////////////////////////////////////story post')
       console.log(hbsObject);
       res.render('index', {
         title: 'Home',
@@ -229,6 +230,26 @@ module.exports = function (app) {
           if(err) {
             return next(err);
           }
+          // email admin that new user has signed up
+          const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: process.env.GMAILEMAIL,
+              pass: process.env.GMAILPASS
+            }
+          });
+      
+          const mailOptions = {
+            to: 'schmitty890@gmail.com, laligadelcaballeroordinario@gmail.com',
+            from: process.env.GMAILEMAIL,
+            subject: `New user! ${req.body.email}`,
+            text: `A new user has signed up! \n Email: ${req.body.email}.`
+          };
+          return transporter.sendMail(mailOptions)
+            .then(() => { if(!res.finished) res.redirect('/'); })
+            .catch(err => next(err));
+
+            
           res.redirect('/');
         });
       });

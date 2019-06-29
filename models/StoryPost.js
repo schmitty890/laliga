@@ -17,6 +17,9 @@ var StoryPostSchema = new Schema({
   user: {
     type: String
   },
+  userID: {
+    type: String
+  },
   logo: {
     type: String
   }
