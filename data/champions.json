@@ -1,0 +1,41 @@
+[
+    {
+        "champions": [
+            {
+                "team": "This Is Totally Sweet",
+                "owner": "Kyle Anderson",
+                "wins": 7,
+                "losses": 6,
+                "ties": 0
+            },
+            {
+                "team": "Sutt Bex",
+                "owner": "Aaron Powell",
+                "wins": 7,
+                "losses": 6,
+                "ties": 0
+            },
+            {
+                "team": "Sutt Bex",
+                "owner": "Aaron Powell",
+                "wins": 8,
+                "losses": 5,
+                "ties": 0
+            },
+            {
+                "team": "Sutt Bex",
+                "owner": "Aaron Powell",
+                "wins": 10,
+                "losses": 3,
+                "ties": 0
+            },
+            {
+                "team": "Hyde ya Gurly Hyde ya Wife",
+                "owner": "Dylan Tighe",
+                "wins": 12,
+                "losses": 1,
+                "ties": 0
+            }
+        ]
+    }
+]
