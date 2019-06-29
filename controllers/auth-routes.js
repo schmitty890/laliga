@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const passport = require('passport');
 const User = require('../models/User');
+var db = require("../models");
 
 const randomBytesAsync = promisify(crypto.randomBytes);
 const passportConfig = require('../config/passport');
@@ -57,6 +58,27 @@ module.exports = function (app) {
       title: 'Facts',
       hbsObject: hbsObject
     });
+  });
+
+  /**
+   * POST /facts
+   * facts page
+   * Ensure user is authenticated in passport first then render this page
+   */
+  app.post("/fact", passportConfig.isAuthenticated, function(req, res) {
+    const hbsObject = {
+      user: req.user
+    }
+    // Create a new StoryPost and pass the req.body to the entry
+    db.Fact.create(req.body)
+      .then(function(dbFactPost) {
+        // If saved successfully, send the the new User document to the client
+        res.send(`Thanks for saving a fact, ${hbsObject.user.firstName}!`);
+        // res.redirect('/');
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
   });
 
   /**

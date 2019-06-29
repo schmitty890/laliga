@@ -1,1 +1,61 @@
-<div>facts page</div>
+<!-- Content
+================================================== -->
+<div class="site-content">
+    <div class="container">
+
+        <!-- Checkout Form -->
+        <form class="df-checkout">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Billing Details -->
+                    <div class="card">
+                        <div class="card__header card__header--has-checkbox">
+                            <h4>Submit a league fact</h4>
+                        </div>
+                        <div class="card__content">
+                            <div class="df-billing-fields">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label >Category</label>
+                                            <select id="fact-category" class="form-control">
+                                                <option value="">Select general league or team specific fact...</option>
+                                                <option value="General">General</option>
+                                                <option value="Team">Team</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-0">
+                                    <label>Description</label>
+                                    <textarea id="fact-description" rows="7" class="form-control" placeholder="Whats the fact..."></textarea>
+                                </div>
+
+                                <div id="fact-alert-msg"></div>
+
+                                <div class="df-checkout-payment">
+                                    <div class="place-order">
+                                        <input type="submit" class="btn btn-primary-inverse btn-lg btn-block" name="df_checkout_place_order" id="submit-fact" value="Submit League Fact">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Billing Details / End -->
+
+                </div>
+
+            </div>
+
+        </form>
+        <!-- Checkout Form / End -->
+
+    </div>
+</div>
+
+<!-- Content / End -->
