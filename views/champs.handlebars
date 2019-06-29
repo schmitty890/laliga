@@ -1,1 +1,57 @@
-<div>champs</div>
+<!-- Content
+================================================== -->
+<div class="site-content">
+    <div class="container">
+        <!-- Team Latest Results -->
+        <div class="card card--has-table">
+            <div class="card__header card__header--has-btn">
+                <h4>{{hbsObject.champions.title}}</h4>
+            </div>
+            <div class="card__content">
+                <div class="table-responsive">
+                    <table class="table table-hover team-result">
+                        <thead>
+                            <tr>
+                                {{!-- <th class="team-result__date">Date</th> --}}
+                                <th class="team-result__vs">Champion</th>
+                                <th class="team-result__score">Year</th>
+                                <th class="team-result__score">Record</th>
+                                {{!-- <th class="team-result__status">Status</th> --}}
+                                {{!-- <th class="team-result__pass">Hi Passing</th> --}}
+                                {{!-- <th class="team-result__rush">Hi Rushing</th> --}}
+                                {{!-- <th class="team-result__receiving">Hi Receiving</th> --}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each hbsObject.champions.champions}}
+                                <tr>
+                                    {{!-- <td class="team-result__date">10/16/2017</td> --}}
+                                    <td class="team-result__vs">
+                                        <div class="team-meta">
+                                            <figure class="team-meta__logo">
+                                                <img src="assets/images/samples/logos/lucky_clovers_shield.png" alt="">
+                                            </figure>
+                                            <div class="team-meta__info">
+                                                <h6 class="team-meta__name">{{this.owner}}</h6>
+                                                <span class="team-meta__place">{{this.team}}</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="team-result__status">{{this.year}}</td>
+                                    <td class="team-result__score">{{this.wins}}-{{this.losses}}-{{this.ties}}</td>
+                                    {{!-- <td class="team-result__status">Home</td> --}}
+                                    {{!-- <td class="team-result__pass">Steve Masterson 264 (ALC)</td> --}}
+                                    {{!-- <td class="team-result__rush">Johnathan Reese 70 (CLO)</td> --}}
+                                    {{!-- <td class="team-result__receiving">Mark Thompson 66 (CLO)</td> --}}
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Team Latest Results / End -->
+    </div>
+</div>
+
+<!-- Content / End -->

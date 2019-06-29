@@ -6,6 +6,7 @@ const User = require('../models/User');
 
 const randomBytesAsync = promisify(crypto.randomBytes);
 const passportConfig = require('../config/passport');
+const champsStats = require('../data/champions.json');
 
 module.exports = function (app) {
 
@@ -97,8 +98,11 @@ module.exports = function (app) {
    */
   app.get('/champs', passportConfig.isAuthenticated, function(req, res) {
     const hbsObject = {
-      user: req.user
+      user: req.user,
+      champions: champsStats
     }
+    console.log(hbsObject.champions.title);
+    console.log(hbsObject.champions);
 
     res.render('champs', {
       title: 'champs',
@@ -111,14 +115,21 @@ module.exports = function (app) {
    * champs page
    * Ensure user is authenticated in passport first then render this page
    */
-  app.get('/champs/:champion', passportConfig.isAuthenticated, function(req, res) {
-    console.log(req.params.champion);
+  app.get('/champs/:year', passportConfig.isAuthenticated, function(req, res) {
+    console.log(req.params.year);
     const hbsObject = {
-      user: req.user
+      user: req.user,
+      champion: champsStats.champions.find(function(team, i) {
+        if(team.year == req.params.year) {
+          return team;
+        }
+      })
     }
 
-    res.render('champs', {
-      title: 'champs',
+    console.log(hbsObject);
+
+    res.render('champion', {
+      title: 'champion',
       hbsObject: hbsObject
     });
   });
