@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
   teamName: String,
   logo: String,
   adminApproved: Boolean,
+  admin: Boolean,
   profile: {
     name: String,
     location: String,
