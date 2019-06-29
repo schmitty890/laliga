@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
   lastName: String,
   teamName: String,
   logo: String,
+  adminApproved: Boolean,
   profile: {
     name: String,
     location: String,
