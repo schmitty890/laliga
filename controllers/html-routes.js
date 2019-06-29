@@ -33,6 +33,23 @@ module.exports = function (app) {
 
   });
 
+
+  /**
+   * GET /standings
+   * standings page.
+   */
+  app.get('/standings', function (req, res) {
+    var hbsObject = {
+      user: req.user,
+      yuppyvilleStats: yuppyvilleStats,
+      innercitydgkStats: innercitydgkStats
+    }
+    res.render('standings', {
+      title: 'standings',
+      hbsObject: hbsObject
+    });
+  });
+
   /**
    * GET /login
    * Login page.

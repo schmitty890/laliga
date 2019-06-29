@@ -59,6 +59,22 @@ module.exports = function (app) {
   });
 
   /**
+   * GET /betting-center
+   * betting-center page
+   * Ensure user is authenticated in passport first then render this page
+   */
+  app.get('/betting-center', passportConfig.isAuthenticated, function(req, res) {
+    const hbsObject = {
+      user: req.user
+    }
+
+    res.render('betting-center', {
+      title: 'betting-center',
+      hbsObject: hbsObject
+    });
+  });
+
+  /**
    * GET /all-time-stats
    * all-time-stats page
    * Ensure user is authenticated in passport first then render this page
