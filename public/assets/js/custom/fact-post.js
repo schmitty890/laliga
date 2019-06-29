@@ -5,7 +5,7 @@ $(document).on('click', '#submit-fact', function(e) {
   //   console.log(digitalData);
     var category = $("#fact-category").val();
     var description = $("#fact-description").val();
-    if(category == '' || description == '') {
+    if(description == '') {
         $('#fact-alert-msg').html('');
         var html = `
         <div class="alert alert-warning">
