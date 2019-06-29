@@ -7,7 +7,30 @@
         <form class="df-checkout">
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4">
+
+                    <!-- Widget: Team Newslog -->
+                    <aside class="widget card widget--sidebar widget-newslog">
+                        <div class="widget__title card__header">
+                            <h4>League Fact Log</h4>
+                        </div>
+                        <div class="widget__content card__content">
+                            <ul class="newslog">
+                                {{#each hbsObject.facts}}
+                                    <li class="newslog__item newslog__item--injury">
+                                        <div class="">
+                                            <div class="newslog__content">{{this.description}}</div>
+                                            <time class="newslog__date" datetime="2016-01-19">{{momentFromNowTime this.updatedAt}}</time>
+                                        </div>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- Widget: Team Newslog / End -->
+
+                </div>
+                <div class="col-md-8">
 
                     <!-- Billing Details -->
                     <div class="card">

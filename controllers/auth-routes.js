@@ -54,9 +54,15 @@ module.exports = function (app) {
       user: req.user
     }
 
-    res.render('facts', {
-      title: 'Facts',
-      hbsObject: hbsObject
+    db.Fact.find({}, null, { sort: {'_id': -1} }, function(error, data) {
+      if (error) throw error;
+
+      hbsObject.facts = data;
+      console.log(hbsObject);
+      res.render('facts', {
+        title: 'Facts',
+        hbsObject: hbsObject
+      });
     });
   });
 
